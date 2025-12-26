@@ -22,7 +22,6 @@ public class SharedPrefManager {
     public boolean register(String email, String password, String firstName, String lastName) {
         String savedEmail = sharedPreferences.getString(KEY_EMAIL, null);
         if (savedEmail != null && savedEmail.equals(email)) {
-            // ایمیل تکراری است
             return false;
         }
         editor.putString(KEY_EMAIL, email);
